@@ -1,5 +1,12 @@
 <?php
 
+
+// Augmentation forcée des limites PHP
+ini_set('upload_max_filesize', '64M');
+ini_set('post_max_size', '64M');
+ini_set('memory_limit', '256M');
+ini_set('max_execution_time', '300');
+
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 

@@ -2,15 +2,29 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Salon extends Model {
-    protected $fillable = [
-        'name', 'sub_title', 'categorie', 'distance',
-        'rating', 'ouverture', 'fermeture', 'image_url', 'is_premium'
-    ];
+class Salon extends Model
+{
+    use HasFactory;
 
-    public function reservations() {
-        return $this->hasMany(Reservation::class);
-    }
+    protected $fillable = [
+        'user_id',
+        'title',
+        'sub_title',
+        'name',
+        'categorie',
+        'rating',
+        'image_url',
+        'distance',
+        'address',
+        'opening_hours',
+        'ouverture',
+        'fermeture',
+        'description',
+        'latitude',
+        'longitude',
+        
+    ];
 }
